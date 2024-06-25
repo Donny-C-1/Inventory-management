@@ -1,0 +1,350 @@
+/* * #region Defaults */
+.btn {
+  display: block;
+  background-image: linear-gradient(
+    90deg,
+    var(--green-grad-1),
+    var(--green-grad-2)
+  );
+  padding: 0.6rem 1.6rem;
+  color: var(--black);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+  width: max-content;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--grayish-blue-400) inset !important;
+  -webkit-text-fill-color: white;
+}
+
+/* #endregion */
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    45deg,
+    var(--deep-gradient-blue),
+    var(--light-gradient-blue)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  flex: 1;
+  margin-left: 13rem;
+  overflow: hidden;
+}
+
+.container {
+  padding: 2rem 3rem 2rem 1rem;
+  height: 100%;
+  overflow: auto;
+}
+
+.item-group {
+  /* overflow: auto;
+  height: 100%;
+  padding: 2rem 3rem; */
+
+  .product-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--grayish-blue-500);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+
+    .detail-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 50%;
+    }
+
+    .sample-img {
+      display: inline-block;
+      height: 2.5rem;
+      aspect-ratio: 1;
+      background-color: var(--grayish-blue-600);
+      border-radius: 0.3rem;
+    }
+
+    .product-name {
+      display: block;
+      color: currentColor;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      font-family: "Arial Rounded MT";
+    }
+
+    .product-description {
+      font-size: 0.8rem;
+    }
+
+    .view-btn {
+      margin-left: auto;
+      color: var(--black);
+      padding: 0.5rem 1.6rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      background-image: linear-gradient(
+        var(--green-grad-1),
+        var(--green-grad-2)
+      );
+    }
+  }
+}
+
+/* * Product List */
+/* #region Product List */
+.right {
+  margin-left: auto;
+}
+
+/* #endregion */
+
+/* * Category List */
+/* #region Category List */
+.category-item {
+  display: inline-grid;
+  place-items: center;
+  width: 10rem;
+  height: 5rem;
+  margin: 1rem;
+  padding: 1rem;
+  float: left;
+  color: currentColor;
+  text-decoration: none;
+  border: 1px solid var(--grayish-blue-800);
+  border-radius: 0.5rem;
+}
+/* #endregion */
+
+/* * Form */
+/*  #region Form */
+
+form {
+  label {
+    display: block;
+    margin-bottom: 2rem;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0.6rem;
+    padding: 0.8rem;
+    background-color: transparent;
+    border: 1px solid var(--grayish-blue-800);
+    border-radius: 0.3rem;
+    color: var(--white);
+    font-style: italic;
+  }
+
+  button {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+/* #endregion */
+
+/* * Product Details */
+/* #region */
+.details-page {
+  .head-group {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    font-family: var(--ff-int);
+    margin-bottom: 1rem;
+
+    .id {
+      font-size: 0.75rem;
+    }
+  }
+
+  div:nth-child(2) {
+    margin-bottom: 2rem;
+  }
+
+  [class|="boxed"] {
+    padding: .75rem 1rem;
+    margin-right: 1.5rem;
+    border: 1px solid currentColor;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+  }
+
+  .boxed-category {
+    color: var(--green);
+  }
+
+  .description {
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  div:nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button:nth-of-type(1) {
+    background-color: red;
+    background-image: none;
+    color: white;
+  }
+}
+/* #endregion */
+
+
+/* * {
+  box-sizing: border-box;
+
+  --ff-heading: 'Quicksand', 'Rockwell', 'OCR A', 'Arial Rounded MT', sans-serif;
+  --ff-text: 'Rockwell', 'OCR A', 'Arial Rounded MT', sans-serif;
+
+  --clr-bg: #f2e1ac;
+  --clr-text: #000;
+  --clr-primary: tomato;
+
+  --clr-neutral-dark: #000;
+  --clr-neutral-light: #fff;
+  --clr-transparent-neutral-dark: #aaa;
+} */
+
+/* html, body {
+  height: 100%;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: var(--ff-text);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+} */
+
+/* #region Dialog */
+.dialog {
+  --max-width: 30rem;
+  position: relative;
+  padding: 0;
+  background-color: white;
+  border: 0;
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, .2);
+  animation: zoom-dialog
+   .25s ease;
+  transform-style: preserve-3d;
+  transition: all .3s ease .1s;
+}
+
+.dialog.fade {
+  opacity: 0;
+  translate: 0 2.1rem;
+  scale: .97;
+}
+
+.dialog .dialog-frame {
+  opacity: 0;
+  scale: .8;
+  max-width: var(--max-width);
+  padding: 3rem;
+  text-align: center;
+  transition: all .35s ease;
+  animation: show-up-dialog-inner .25s ease .1s forwards;
+}
+
+.dialog.fade .dialog-frame {
+  opacity: 0;
+  scale: .98;
+  translate: 0 1.7rem;
+}
+
+.dialog .dialog-frame .close-dialog {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  padding: .75rem 1.25rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border: 0;
+  background-color: transparent;
+  color: var(--clr-transparent-neutral-dark);
+  cursor: pointer;
+  transition-property: color, scale;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+}
+
+.dialog .dialog-frame .close-dialog:hover {
+  color: var(--clr-neutral-dark);
+}
+
+.dialog .dialog-frame .close-dialog:active {
+  scale: .9;
+}
+
+.dialog .dialog-frame .title {
+  font-family: var(--ff-heading);
+  color: var(--clr-primary);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@keyframes zoom-dialog
+{
+  from {
+      opacity: 0;
+      scale: .8;
+  }
+  65% {
+      scale: 1.03;
+  }
+  to {
+      opacity: 1;
+      scale: 1;
+  }
+}
+
+@keyframes show-up-dialog-inner {
+  from {
+      opacity: 0;
+      scale: .8;
+  }
+  to {
+      opacity: 1;
+      scale: 1;
+  }
+}
+
+.dialog::backdrop {
+  background-color: var(--clr-neutral-light);
+  opacity: .7;
+}
+/* #endregion */

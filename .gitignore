@@ -1,0 +1,11 @@
+# Ignore all node dependencies
+/node_modules
+
+# Ignore log files
+/log
+
+# Ignore environment variables
+.env
+
+# Ignore system files
+desktop.ini

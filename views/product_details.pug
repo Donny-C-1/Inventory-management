@@ -1,0 +1,20 @@
+extends layout 
+
+block main 
+    .details-page
+        .head-group
+            h2 #{product.name}
+            p.id= '#'+product._id
+        div
+            span.boxed-category= product.category.name
+            span.boxed-price.ff-int= '₦'+product.price
+            span.ff-int= product.quantity + " in stock"
+        div.description= product.description
+        div
+            a.btn(href=product.url + '/update') Update
+            button.btn.show-dialog Delete
+    dialog.dialog 
+        .dialog-frame 
+            button.close-dialog &times;
+            p Are you sure you want to delete this product
+            a.btn(href=`/products/${product._id}?_method=DELETE`) DELETE

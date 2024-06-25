@@ -1,0 +1,13 @@
+extends layout 
+
+block main 
+    h2 Create New Category
+    form(action=`/categories/${category ? category._id : 'create'}` method="POST") 
+        - var [ name, description ] = category ? [ category.name, category.description ] : []
+        label(for="input_category_name") 
+            span Name 
+            input(type="text" id="input_category_name" name="name" autocomplete="off" value=name)
+        label(for="input_category_description") 
+            span Description 
+            textarea#input_category_description(name="description" cols="30" rows="10" autocomplete="off")= description
+        button.btn(type="submit")= category ? "Update" : "Create"

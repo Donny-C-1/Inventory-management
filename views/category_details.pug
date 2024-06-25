@@ -1,0 +1,16 @@
+extends layout 
+
+block main 
+    .details-page
+        .head-group
+            h2 #{category.name}
+            p.id= '#'+category._id
+        div.description= category.description
+        div
+            a.btn(href=category.url + '/update') Update
+            button.btn.show-dialog Delete
+    dialog.dialog 
+        .dialog-frame 
+            button.close-dialog &times;
+            p Are you sure you want to delete this category
+            a.btn(href=`/categories/${category._id}?_method=DELETE`) DELETE

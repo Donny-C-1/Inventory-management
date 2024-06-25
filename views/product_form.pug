@@ -1,0 +1,19 @@
+extends layout 
+
+block main 
+    h2 Create New Product
+    form(action=`/products/${product ? product._id : 'create'}` method="post")
+        - var [ name, description, category, price, quantity ] = product ? [ product.name, product.description, product.category, product.price, product.quantity] : [,,{_id:0}]
+        label(for="product_name") Name:
+            input#product_name(type="text" name="name" value=name)
+        label(for="product_description") Description:
+            textarea#product_description(name="description" cols="30" rows="10" autocomplete="off")= description
+        label(for="product_category") Category:
+            select#product_category(name="category")
+                - for (var rCategory of categories)
+                    option(value=rCategory._id selected=(category._id.toString() == rCategory._id.toString()))= rCategory.name
+        label(for="product_price") Price: 
+            input#product_price(type="text" name="price" value=price)
+        label(for="product_quantity") No in Stock: 
+            input#product_quantity(type="text" name="quantity" value=quantity)
+        button.btn(type="submit")= product ? "Update" : "Create"

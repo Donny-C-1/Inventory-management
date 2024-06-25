@@ -1,0 +1,9 @@
+extends layout
+
+block main
+    h2 Categories
+    a.btn.right(href="/categories/create") Add Categories
+    ul
+      each category in categories
+        li
+          a.category-item(href=category.url)= category.name

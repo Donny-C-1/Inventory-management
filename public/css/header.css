@@ -1,0 +1,19 @@
+header {
+  /* --text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  padding: 0rem 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  
+  .inner {
+    border-bottom: 1px solid var(--grayish-blue-800);
+
+    .site_logo {
+      font-family: var(--ff-head);
+      color: var(--white);
+      padding: 1rem 0 .6rem;
+      font-size: 2rem;
+      font-weight: normal;
+      
+      text-shadow: var(--text-shadow);
+    }
+  }
+}

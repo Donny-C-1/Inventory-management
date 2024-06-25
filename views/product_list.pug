@@ -1,0 +1,15 @@
+extends layout
+
+block main
+  //- h2 Products
+  a.btn.right(href="/products/create") Add Items
+  ul.item-group
+    each product in products
+      li.product-item
+        .detail-group
+          .sample-img
+          div
+            a.product-name(href=product.url)= product.name
+            p.product-description= product.category.name
+        p.ff-int= product.price
+        a.view-btn(href=product.url) view

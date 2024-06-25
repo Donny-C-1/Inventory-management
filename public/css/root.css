@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ff-head: 'Old English Text MT';
+    --ff-body: corbel;
+    --ff-int: 'Arial Rounded MT';
+    
+    /* Colors */
+    --white: #fff;
+    --black: #000;
+    --deep-gradient-blue: #1e1e23ff;
+    --light-gradient-blue: #29292fff;
+    --grayish-blue-800: #66666645;
+    --grayish-blue-600: #32323aff;
+    --grayish-blue-500: #27272cff;
+    --grayish-blue-400: #252429ff;
+    --green: #86f98bff;
+    --green-grad-1: #86f98dff;
+    --green-grad-2: #88fa79ff;
+
+    --clr-bg: white;
+    --clr-text: var(--white);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--ff-body);
+    color: var(--clr-text);
+    background-color: var(--clr-bg);
+    min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* ^ Utility Classes  */
+.ff-int {
+    font-family: var(--ff-int);
+}
